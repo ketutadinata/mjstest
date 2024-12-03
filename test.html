@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Iseng</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat Datang!</h1>
+    <p>Klik tombol di bawah ini</p>
+    <button id="isengButton">Klik</button>
+    <div id="imageContainer" class="hidden">
+      <img src="https://placekitten.com/300/300" alt="Tes">
+      <p>Halo</p>
+    </div>
+  </div>
+
+  <script>
+    const button = document.getElementById('isengButton');
+    const imageContainer = document.getElementById('imageContainer');
+
+    button.addEventListener('click', () => {
+      imageContainer.classList.toggle('hidden');
+      button.textContent = button.textContent === 'Klik Aku' ? 'Tutup Kejutan' : 'Klik Aku';
+    });
+  </script>
+</body>
+</html>
